@@ -1,0 +1,348 @@
+<header class="ct-mediaSection" data-stellar-background-ratio="0.3" data-height="140" data-type="parallax" data-bg-image="assets/images/content/agency-parallax.jpg" data-bg-image-mobile="assets/images/content/agency-parallax.jpg">
+    <div class="ct-mediaSection-inner">
+        <div class="container">
+            <div class="ct-u-displayTableVertical">
+                <div class="ct-textBox ct-u-text--white ct-u-displayTableCell text-left">
+                    <h2 class="text-uppercase">{{propertyDetails?.tittle| slice:0:40}}</h2>
+                    <h4 class="text-uppercase">{{propertyDetails?.location}}</h4>
+                    <span class="ct-productID ct-fw-600">
+                        Property ID: {{propertyDetails?.id}}
+                    </span>
+                </div>
+                <div class="ct-u-displayTableCell text-right">
+                    <a href="search-grid.html" class="btn btn-sm btn-default btn-transparent--border btn-hoverWhite ct-u-text--white"><i class="fa fa-heart-o"></i></a>
+                    <a href="javascript:window.print()" class="btn btn-sm btn-default btn-transparent--border btn-hoverWhite ct-u-text--white"><i class="fa fa-print"></i></a>
+                    <div class="ct-buttonBox">
+                        <a href="search-grid.html" class="btn btn-default btn-transparent--border btn-hoverWhite ct-u-text--white">Back to Results</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="ct-u-paddingBottom60">
+    <div class="container">
+        <div class="ct-productMeta--single text-uppercase">
+            <div class="row">
+                <div class="col-md-8 col-lg-9">
+                    <div class="ct-u-displayTableVertical">
+                        <div class="ct-u-displayTableCell text-left">
+                            <i class="fa fa-calendar"></i><h6>published on  {{propertyDetails?.postDate|date}}</h6>
+                        </div>
+                        <div class="ct-u-displayTableCell text-left">
+                            <i class="fa fa-pencil-square-o"></i><h6>updated on {{propertyDetails?.postDate|date}}</h6>
+                        </div>
+                        <div class="ct-u-displayTableCell text-right">
+                            <div class="fb-like" data-href="https://www.facebook.com/createITpl" data-layout="button" data-action="like" data-share="false"></div>
+                            <div class="g-plusone" data-size="medium" data-annotation="none"></div>
+                            <a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3 text-right">
+                    <a href=""><i class="fa fa-times"></i>report abuse</a>
+                </div>
+            </div>
+        </div>
+        <div class="ct-section--products">
+            <div class="row">
+                <div class="col-md-8 col-lg-9">
+                    <div class=" ct-u-marginBottom30">
+                        <img src="https://localhost:44359/PropertyImages/{{propertyDetails?.images}}" alt="">
+                        <!-- <div class="ct-owl-controls--type2" data-single="true" data-pagination="false" data-navigation="false" data-snap-ignore="true" id="sync1">
+                            <div class="item">
+                                <img src="https://localhost:44359/PropertyImages/{{propertyDetails?.images}}" alt="">
+                            </div>
+                            
+                        </div>
+                        <div class="ct-navigationThumbnail">
+                            <div class="ct-owl-controls--type3" data-single="false" data-items="5" data-pagination="false" data-snap-ignore="true" id="sync2">
+                                <div class="item">
+                                    <img src="https://localhost:44359/PropertyImages/{{propertyDetails?.images}}" alt="">
+                                </div>
+                              
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="ct-heading ct-u-marginBottom20">
+                                <h3 class="text-uppercase">Summary</h3>
+                            </div>
+                            <div class="ct-u-displayTableVertical ct-productDetails">
+                                <div class="ct-u-displayTableRow">
+                                    <div class="ct-u-displayTableCell">
+                                        <span class="ct-fw-600">Price</span>
+                                    </div>
+                                    <div class="ct-u-displayTableCell text-right">
+                                        <span class="ct-price">PKR {{propertyDetails?.price}}</span>
+                                    </div>
+                                </div>
+                                <div class="ct-u-displayTableRow">
+                                    <div class="ct-u-displayTableCell">
+                                        <span class="ct-fw-600">Area</span>
+                                    </div>
+                                    <div class="ct-u-displayTableCell text-right">
+                                        <span>{{propertyDetails?.areaUnit}} {{propertyDetails?.area}}</span>
+                                    </div>
+                                </div>
+                                <div class="ct-u-displayTableRow">
+                                    <div class="ct-u-displayTableCell">
+                                        <span class="ct-fw-600">Status</span>
+                                    </div>
+                                    <div class="ct-u-displayTableCell text-right">
+                                        <span>Sale</span>
+                                    </div>
+                                </div>
+                                <div class="ct-u-displayTableRow">
+                                    <div class="ct-u-displayTableCell">
+                                        <span class="ct-fw-600">Type</span>
+                                    </div>
+                                    <div class="ct-u-displayTableCell text-right">
+                                        <span>House</span>
+                                    </div>
+                                </div>
+                                <div class="ct-u-displayTableRow">
+                                    <div class="ct-u-displayTableCell">
+                                        <span class="ct-fw-600">Location</span>
+                                    </div>
+                                    <div class="ct-u-displayTableCell text-right">
+                                        <span>{{propertyDetails?.location}}</span>
+                                    </div>
+                                </div>
+                                <div class="ct-u-displayTableRow">
+                                    <div class="ct-u-displayTableCell">
+                                        <span class="ct-fw-600">Beds</span>
+                                    </div>
+                                    <div class="ct-u-displayTableCell text-right">
+                                        <span>4</span>
+                                    </div>
+                                </div>
+                                <div class="ct-u-displayTableRow">
+                                    <div class="ct-u-displayTableCell">
+                                        <span class="ct-fw-600">Baths</span>
+                                    </div>
+                                    <div class="ct-u-displayTableCell text-right">
+                                        <span>2</span>
+                                    </div>
+                                </div>
+                                <div class="ct-u-displayTableRow">
+                                    <div class="ct-u-displayTableCell">
+                                        <span class="ct-fw-600">Garage</span>
+                                    </div>
+                                    <div class="ct-u-displayTableCell text-right">
+                                        <span>1</span>
+                                    </div>
+                                </div>
+                                <div class="ct-u-displayTableRow">
+                                    <div class="ct-u-displayTableCell">
+                                        <span class="ct-fw-600">Pool</span>
+                                    </div>
+                                    <div class="ct-u-displayTableCell text-right">
+                                        <span>yes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="ct-heading ct-u-marginBottom20">
+                                
+                                <h3 class="text-uppercase">Description</h3>
+                            </div>
+                            <p class="ct-u-marginBottom20">
+                                {{propertyDetails?.description}}
+                            </p>
+                            <div class="ct-heading ct-u-marginBottom20">
+                                <h3 class="text-uppercase">Property Details</h3>
+                            </div>
+                            <div class="ct-u-displayTableVertical ct-productDetails--type2 ct-u-marginBottom20">
+                                <div class="ct-u-displayTableCell">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <i class="fa fa-check-circle"></i>
+                                            <span class="text-capitalize">air conditioning</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-check-circle"></i>
+                                            <span class="text-capitalize">ADSL cable</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-check-circle"></i>
+                                            <span class="text-capitalize">WiFi</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-times-circle negative"></i>
+                                            <span class="text-capitalize">HiFi audio</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-check-circle"></i>
+                                            <span class="text-capitalize">fridge</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-check-circle"></i>
+                                            <span class="text-capitalize">grill</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ct-u-displayTableCell">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <i class="fa fa-check-circle"></i>
+                                            <span class="text-capitalize">Full HD TV</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-times-circle negative"></i>
+                                            <span class="text-capitalize">Digital antenna</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-check-circle"></i>
+                                            <span>Kitchen with Island</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-times-circle negative"></i>
+                                            <span class="text-capitalize">exotic garden</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-times-circle negative"></i>
+                                            <span class="text-capitalize">guest house</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                           
+                            <div class="ct-heading ct-u-marginBottom20">
+                                <button (click)="makePayment(propertyDetails?.price)" class="btn btn-success btn-block">Pay PKR {{propertyDetails?.price}}</button>
+                          <br><br>
+                                <h3 class="text-uppercase">Reviews</h3>
+                            </div>
+                <ng-container *ngFor="let item of allProductReviews">
+                    <span> <i class="fa fa-user"></i>{{item?.user}}</span>
+                    <div class="progress-icons" data-font-size="10" data-icon-color="#eb8a21" data-active="5" data-total="8" data-icon="fa-trophy" data-delay="400" style="font-size: 14px;">
+                        <i  class="fa fa-star" [ngStyle]="{'color':checkProductRating(item?.rate)>=1?'rgb(235, 138, 33)':''}"></i>
+                         <i class="fa fa-star" [ngStyle]="{'color':checkProductRating(item?.rate)>=2?'rgb(235, 138, 33)':''}"></i>
+                          <i class="fa fa-star" [ngStyle]="{'color':checkProductRating(item?.rate)>=3?'rgb(235, 138, 33)':''}"></i>
+                           <i class="fa fa-star" [ngStyle]="{'color':checkProductRating(item?.rate)>=4?'rgb(235, 138, 33)':''}"></i> 
+                           <i class="fa fa-star" [ngStyle]="{'color':checkProductRating(item?.rate)>=5?'rgb(235, 138, 33)':''}"></i>
+                    </div>
+                    <h2>{{item?.reviewTittle}}</h2>
+                    <p>{{item?.reviewComents}} </p>
+                    <span style="font-size:12px ;">{{item?.createAt|date}}</span>
+                         <hr>  
+                </ng-container>
+                
+                            <!-- <div class="ct-js-googleMap ct-googleMap ct-js-googleMap--single" data-offset="1" data-location="Richmond" data-icon="assets/images/marker-house.png" data-zoom="14" data-height="260" id="map"></div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="ct-js-sidebar">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-12">
+                                <div class="widget ct-widget--calculator">
+                                    <div class="widget-inner">
+                                        <form role="form" class="ct-form--darkStyle">
+                                            <div class="form-group">
+                                                <div class="ct-form--label--type2">
+                                                    <div class="ct-u-displayTableVertical">
+                                                        <div class="ct-u-displayTableCell">
+                                                            <div class="ct-input-group-btn">
+                                                                <button class="btn btn-primary">
+                                                                    <i class="fa fa-calculator"></i>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ct-u-displayTableCell text-center">
+                                                            <span class="text-uppercase">Calculate Loan</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="ct-form--item">
+                                                    <label>Property Price ($)</label>
+                                                    <input type="text" required class="form-control input-lg" placeholder="Any">
+                                                </div>
+                                                <div class="ct-form--item">
+                                                    <label>Procent Down</label>
+                                                    <input type="text" required class="form-control input-lg" placeholder="Any">
+                                                </div>
+                                                <div class="ct-form--item">
+                                                    <label>Term (Years)</label>
+                                                    <input type="text" required class="form-control input-lg" placeholder="Any">
+                                                </div>
+                                                <div class="ct-form--item">
+                                                    <label>Interest Rate in %</label>
+                                                    <input type="text" required class="form-control input-lg" placeholder="Any">
+                                                </div>
+                                                <div class="ct-form--item last">
+                                                    <button type="submit" class="btn btn-warning">Calculate My Mortgage</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-12">
+                                <div class="widget">
+                                    <div class="widget-inner">
+                                        <h4 class="text-uppercase">Contact agent</h4>
+                                        <div class="ct-personBox text-left">
+                                            <div class="ct-imagePerson">
+                                                <img src="assets/images/content/agents-1.jpg" alt="">
+                                                <ul class="ct-panel--socials list-inline list-unstyled">
+                                                    <li><a href="https://www.facebook.com/createITpl"><div class="ct-socials ct-socials--circle"><i class="fa fa-facebook"></i></div></a></li>
+                                                    <li><a href="https://twitter.com/createitpl"><div class="ct-socials ct-socials--circle"><i class="fa fa-twitter"></i></div></a></li>
+                                                    <li><a href="#"><div class="ct-socials ct-socials--circle"><i class="fa fa-instagram"></i></div></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="ct-personContent">
+                                                <div class="ct-personName ct-u-paddingBottom10 ct-u-marginBottom20">
+                                                    <h5 class="ct-fw-600">Kristine Black</h5>
+                                                    <a href="">15 Properties</a>
+                                                </div>
+                                                <div class="ct-personDescription  ct-u-paddingBottom10 ct-u-marginBottom20">
+                                                    <ul class="list-unstyled ct-contactPerson">
+                                                        <li>
+                                                            <i class="fa fa-phone"></i>
+                                                            <span>(123) 456 7890</span>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-mobile"></i>
+                                                            <span>888 999 000</span>
+                                                        </li>
+                                                        <li>
+                                                            <i class="fa fa-skype"></i> <a href="">kristine.black</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="ct-personContact">
+                                                    <div class="successMessage alert alert-success" style="display: none">
+                                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                                        Thank You!
+                                                    </div>
+                                                    <div class="errorMessage alert alert-danger" style="display: none">
+                                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                                        Ups! An error occured. Please try again later.
+                                                    </div>
+                                                    <form role="form" action="assets/form/send.php" method="post" class="contactForm validateIt" data-email-subject="Contact Form" data-show-errors="true">
+                                                        <div class="form-group">
+                                                            <div class="ct-form--item">
+                                                                <input id="contact_name" type="text" required class="form-control input-lg ct-u-marginBottom10" name="field[]" placeholder="Name">
+                                                                <input id="contact_email" type="email" required class="form-control input-lg ct-u-marginBottom10" name="field[]" placeholder="Email">
+                                                                <input id="contact_phone" type="tel" required class="form-control input-lg ct-u-marginBottom10" name="field[]" placeholder="Phone">
+                                                                <textarea id="contact_message" placeholder="Message" class="form-control input-lg" rows="4" name="field[]" required=""></textarea>
+                                                            </div>
+                                                            <button type="submit" class="btn btn-warning text-capitalize center-block">Send Message</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

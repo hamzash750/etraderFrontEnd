@@ -1,0 +1,67 @@
+<div class="ct-section--products">
+    <div class="row">
+        <div class="col-md-8 col-lg-9">
+            <div class="ct-heading ct-u-marginBottom30">
+                <h3 class="text-uppercase">pre</h3>
+                <a href="search-list.html" class="pull-right"><i class="fa fa-angle-right"></i>View More</a>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-4" *ngFor="let item of allProductList">
+                    <div class="ct-itemProducts ct-u-marginBottom30 ct-hover">
+                        <label class="control-label sale">
+                            Sale
+                        </label>
+                        <a href="/home/detail?id={{item?.id}}">
+                            <div class="ct-main-content">
+                                <div class="ct-imageBox">
+                                   <img src="https://localhost:44359/PropertyImages/{{item?.images}}" alt=""><i class="fa fa-eye"></i>
+                                </div>
+                                <div class="ct-main-text">
+                                    <div class="ct-product--tilte">
+                                       {{item?.tittle | slice:0:30}}
+                                    </div>
+                                    <div class="ct-product--price">
+                                        <!-- <span class="ct-price--Old">$ 450,000</span> -->
+                                        <span>Pkr      {{item?.price}}</span>
+                                    </div>
+                                    <div class="ct-product--description">
+                                        {{item?.description | slice:0:50}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ct-product--meta">
+                                <div class="ct-icons">
+                                    <span>
+                                        <i class="fa fa-bed"></i> 
+                                    </span>
+                                    <span>
+                                        <i class="fa fa-cutlery"></i> 
+                                    </span>
+                                </div>
+                                <div class="ct-text">
+                                    <span> Area: <span> {{item?.areaUnit}}  {{item?.area}}</span></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+            <div class="ct-js-sidebar">
+                <div class="row">
+                    <div class="col-sm-6 col-md-12">
+                        <app-calculator></app-calculator>
+                   
+                    </div>
+                    <div class="col-sm-6 col-md-12">
+                     <app-recently-reduce></app-recently-reduce>
+                    </div>
+                </div>
+            </div>
+
+          
+        </div>
+    </div>
+</div>
